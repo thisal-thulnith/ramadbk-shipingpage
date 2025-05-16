@@ -24,6 +24,7 @@ class ShippingPage extends StatefulWidget {
 }
 
 class _ShippingPageState extends State<ShippingPage> {
+  // ignore: unused_field
   String? _selectedSalesPerson;
   final List<String> _salesPersons = [
     'Select',
@@ -109,6 +110,10 @@ class _ShippingPageState extends State<ShippingPage> {
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(height: 20),
+                  SizedBox(
+                    width: 300, // Fixed width for form fields
+                    child: _buildDropdown('Salesperson', _salesPersons),
+                  ),
                   // Form
                   SizedBox(
                     // Changed from Padding to SizedBox
